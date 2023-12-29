@@ -31,7 +31,7 @@ let irandom2 = items[Math.floor(Math.random() * items.length)];
         LENGUA.style.display='block';
         ; PLAY.disabled=true;
         GATO.style.scale='0.6';
-        GATO.style.translate='0 -300px';
+        GATO.style.translate='0 -20';
         VIDEO.play();
         VIDEO.style.display='block';
     }
