@@ -1,0 +1,33 @@
+body {background-color: #011222;display: flex;align-items: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;flex-direction: column;}
+
+#gato{height: 800px;width: 800px;margin-top: 200px }
+
+#orejas{display: flex;justify-content: space-between;}
+
+#oreja1, #oreja2 {height: 180px;width: 240px;background-color: #fff;}
+#oreja1{border-radius: 20% 100% 0 0;}
+#oreja2{border-radius: 100% 20% 0 0;}
+
+#cabeza{height: 600px;width: 100%;background-color: #fff;border-radius: 0 0 30% 30%;display: flex;justify-content: flex-end;align-items: center;flex-direction: column;}
+
+button{height: 80px;width: 120px;background-color: #011222;border-radius: 20% 20% 50% 50% ; color: #fff;font-size: 30px;border: none;margin-bottom: 10px;}
+
+#boca{height: 200px;width: 60%;background-color: #011222;margin-bottom: 10px;
+border-radius: 5% 5% 50% 50%;color: #fff;font-size: 80px;text-align: center;display: flex;align-items: center;flex-direction: column;justify-content: center;}
+
+button:active{scale: 0.95;}
+
+#ojos{display: flex; justify-content: space-around;height: 200px;width: 100%;margin-bottom: 10px;}
+
+#ojo1 , #ojo2 {background-color: #011222; height: 100%;width: 200px;border-radius: 50%; font-size: 110px;display: flex;justify-content: center;align-items: center;}
+
+#lengua{height: 150px;width: 200px;background-color: green;translate: 0 -50px;border-radius: 10px 10px 40% 40%;display: none;}
+h1{translate: 0 -130px;}
+
+h3{margin-top: 200px;display: none;}
+
+#gatobailando{translate: 0 -200px;width: 400px;display: none;}
+
+
+
+
