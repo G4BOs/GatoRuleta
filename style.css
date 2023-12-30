@@ -27,8 +27,10 @@ body {
     width: 81%;
     height: 20%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1px;
+    align-items: center;
 }
 
 #oreja1,#oreja2{
@@ -131,9 +133,25 @@ body {
     width: 50%;
     height: 100%;}
 
-#vidas{
+#vida{
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
     display: flex;
-    color: white;}
+    justify-content: center;
+    align-items: center;
+}
+
+#corazon{
+    translate: 5px;
+}
+#corazon.latirmas{animation: latir 0.4s linear 0.25s ;}
+
+#vidarestante{
+    translate: -24px 3px;
+    color: rgba(255, 255, 255, 1);
+}
+
 
 #reintentar{
     height: 30px;
@@ -141,3 +159,25 @@ body {
     border-radius: 10px;
     border: none;
 }    
+
+#mascorazon{
+    position: absolute;
+    font-size: 40px;
+    scale: 0;
+}
+#mascorazon.corazonmas{animation: sumarvida 0.4s linear;}
+
+@keyframes sumarvida {
+    0%{scale: 0;}
+    25%{scale: 0.1;translate: 0 50px;}
+    75%{scale: 1}
+    100%{scale: 0.4;translate: 0 -120px;}
+}
+
+@keyframes latir {
+    0%{scale: 1;}
+    50%{scale: 1.5;}
+    100%{scale: 1;}
+}
+
+button:hover{cursor: pointer;}

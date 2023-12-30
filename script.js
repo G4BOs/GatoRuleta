@@ -1,19 +1,35 @@
+
+
 const TIRAR = document.getElementById('tirar');
+
 const pop = new Audio('sound/pop2.wav');
 const win = new Audio('sound/victoria.mp3');
 const gameover= new Audio('sound/gameover.wav')
+const mas = new Audio('sound/vida.wav');
+
 var emogis = ['😼','😾','😿','🙀','😽','😻','😹','😸','😺'];
+
 let vueltas = 10;
+
 const C1= document.getElementById('casilla1');
 const C2= document.getElementById('casilla2');
 const C3= document.getElementById('casilla3');
+
 const SUMAR = document.getElementById('sumar');
 SUMAR.disabled=true;
+
 let vidas = 9;
-const VREST= document.getElementById('vidasrestantes');
+
+const VREST= document.getElementById('vidarestante');
+
 const GATO =document.getElementById('gato');
+
 const REINTENTAR = document.getElementById('reintentar');
 REINTENTAR.disabled=true;
+
+const MASCORAZON = document.getElementById('mascorazon');
+
+const CORAZON= document.getElementById('corazon');
 
 
 REINTENTAR.addEventListener('click',()=>{location.reload()})
@@ -27,7 +43,7 @@ function jugar(){
     
 
     vidas = vidas-1;
-    
+
 
     //Game Over
     if(vidas<=0){TIRAR.disabled=true;gameover.play();
@@ -60,7 +76,20 @@ REINTENTAR.disabled=false;
 
 
 }
-VREST.textContent="VIDAS: "+vidas;
+VREST.textContent=vidas;
 
 }
-SUMAR.addEventListener('click',()=>{vidas = vidas+1;VREST.textContent="VIDAS: "+vidas;SUMAR.disabled=true;})
+SUMAR.addEventListener('click',()=>{
+    CORAZON.classList.remove('latirmas');
+    MASCORAZON.classList.remove('corazonmas');
+    vidas = vidas+1;
+    VREST.textContent=vidas;
+    SUMAR.disabled=true;
+mas.play();
+setTimeout(()=>{MASCORAZON.classList.add('corazonmas');
+CORAZON.classList.add('latirmas');},10);
+
+MASCORAZON.classList.add('corazonmas');
+
+
+})
