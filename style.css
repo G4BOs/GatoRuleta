@@ -16,7 +16,7 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid white;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,13 +63,23 @@ body {
 
 #tirar{
     border: none;
-    border-radius: 5px 5px 40% 40%;
-    height: 20px;
+    border-radius: 10px;
+    height: 30px;
     margin-top: 3px;
-
+    width: 50px;
 }
 
+#sumar{
+    height: 30px;
+    width: 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+}    
+
+#sumar:active{scale: 0.9;}
 #tirar:active{scale: 0.9;}
+#reintentar:active{scale: 0.9;}
 
 #casillas{
     height: 40%;
@@ -121,3 +131,13 @@ body {
     width: 50%;
     height: 100%;}
 
+#vidas{
+    display: flex;
+    color: white;}
+
+#reintentar{
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+}    
