@@ -43,10 +43,8 @@ let combinacion=[];
 for(let i=0;i<3;i++){
     combinacion.push(emogis[Math.floor(Math.random()*emogis.length)])}
 
-    if(combinacion[0]==combinacion[1]||combinacion[0]==combinacion[2]){
-        SUMAR.disabled= false;
-        
-    }else {SUMAR.disabled=true;}
+    if(combinacion[0]==combinacion[1]||combinacion[0]==combinacion[2]||combinacion[1]==combinacion[2]){
+        SUMAR.disabled= false;}else {SUMAR.disabled=true;} 
 
 C1.textContent=combinacion[0]
 C2.textContent=combinacion[1]
@@ -63,5 +61,6 @@ REINTENTAR.disabled=false;
 
 }
 VREST.textContent="VIDAS: "+vidas;
+
 }
 SUMAR.addEventListener('click',()=>{vidas = vidas+1;VREST.textContent="VIDAS: "+vidas;SUMAR.disabled=true;})
