@@ -1,40 +1,38 @@
-var items = ['😺','😸','😹','😻','😼','😽','🙀','😿','😾']
-const PLAY= document.getElementById('play');
-const ojo1=document.getElementById('ojo1');
-const ojo2=document.getElementById('ojo2');
-const BOCA = document.getElementById('boca');
-const LENGUA = document.getElementById('lengua');
-const GANO = document.getElementById('ganaste');
-const GATO = document.getElementById('gato');
-const VIDEO = document.getElementById('gatobailando');
+const TIRAR = document.getElementById('tirar');
+const pop = new Audio('sound/pop2.wav');
+const win = new Audio('sound/victoria.mp3');
+var emogis = ['😼','😾','😿','🙀','😽','😻','😹','😸','😺'];
+let vueltas = 10;
+const C1= document.getElementById('casilla1');
+const C2= document.getElementById('casilla2');
+const C3= document.getElementById('casilla3');
 
 
 
-PLAY.addEventListener('click',play);
 
 
 
-function play(){
-    let irandom1 = items[Math.floor(Math.random() * items.length)];
-let irandom2 = items[Math.floor(Math.random() * items.length)];
+TIRAR.addEventListener('click',jugar)
 
-    
+function jugar(){
+    pop.play();
 
-    ojo1.innerHTML=irandom1;
-    ojo2.innerHTML=irandom2;
+let combinacion=[];
 
-    console.log(irandom1)
-    console.log(irandom2)    
+for(let i=0;i<3;i++){
+    combinacion.push(emogis[Math.floor(Math.random()*emogis.length)])}
 
-    if (irandom1==irandom2){
-        GANO.style.display='block';
-        LENGUA.style.display='block';
-        ; PLAY.disabled=true;
-        GATO.style.scale='0.6';
-        GATO.style.translate='0 -20';
-        VIDEO.play();
-        VIDEO.style.display='block';
-    }
+C1.textContent=combinacion[0]
+C2.textContent=combinacion[1]
+C3.textContent=combinacion[2]
 
-    
+if(combinacion[0]==combinacion[1]&&combinacion[0]==combinacion[2]){
+    TIRAR.disabled=true;
+win.play();
+}
+
+
+
+
+
 }

@@ -1,33 +1,123 @@
-body {background-color: #011222;display: flex;align-items: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;flex-direction: column;}
+body {
+    background: url(img/fondo2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
 
-#gato{height: 300px;width: 300px;margin-top: 50px }
+}
 
-#orejas{display: flex;justify-content: space-between;}
+#gato{
+    height: 350px;
+    width: 350px;
+    background-color: rgba(230, 230, 230, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-#oreja1, #oreja2 {height: 50px;width: 80px;background-color: #fff;}
-#oreja1{border-radius: 20% 100% 0 0;}
-#oreja2{border-radius: 100% 20% 0 0;}
+#orejas{ 
+    width: 81%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
 
-#cabeza{height: 250px;width: 100%;background-color: #fff;border-radius: 0 0 30% 30%;display: flex;justify-content: flex-end;align-items: center;flex-direction: column;}
+#oreja1,#oreja2{
+    background-color: rgba(63, 61, 61, 0.2);
+    height: 100%;
+    width: 31%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border: 1px solid white;
+    border-bottom: none;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding: 0%;
+}
 
-button{height: 40px;width: 60px;background-color: #011222;border-radius: 20% 20% 50% 50% ; color: #fff;font-size: 20px;border: none;margin-bottom: 10px;}
+#oreja1{translate: 2px;}
+#oreja2{translate: -1px;}
 
-#boca{height: 80px;width: 60%;background-color: #011222;margin-bottom: 10px;
-border-radius: 5% 5% 50% 50%;color: #fff;font-size: 20px;text-align: center;display: flex;align-items: center;flex-direction: column;justify-content: center;}
+#cabeza{
+    height: 50%;
+    width: 80%;
+    background-color: rgba(63, 61, 61, 0.2);
+    border-radius: 0 0 40% 40%;
+    backdrop-filter: blur(5px);
+    border: 1px solid white;
+    border-top: none;
 
-button:active{scale: 0.95;}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-#ojos{display: flex; justify-content: space-around;height: 80px;width: 100%;margin-bottom: 10px;}
+#tirar{
+    border: none;
+    border-radius: 5px 5px 40% 40%;
+    height: 20px;
+    margin-top: 3px;
 
-#ojo1 , #ojo2 {background-color: #011222; height: 100%;width: 90px;border-radius: 50%; font-size: 60px;display: flex;justify-content: center;align-items: center;}
+}
 
-#lengua{height: 70px;width: 80px;background-color: green;translate: 0 0px;border-radius: 10px 10px 40% 40%;display: none;}
-h1{translate: 0 -20px;}
+#tirar:active{scale: 0.9;}
 
-h3{margin-top: 70px;display: none;}
+#casillas{
+    height: 40%;
+    width: 80%;
+    background-color: rgba(15, 14, 14, 0.33);
+    border: 1px solid white;
+    border-radius: 5px 5px 30px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 30px;
 
-#gatobailando{translate: 0 -20px;width: 100px;display: none;}
+}
 
+#casilla1,#casilla2,#casilla3{
+    height: 90%;
+    width: 30%;
+    border: 1px solid rgb(220, 219, 217);
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
+@keyframes ganador{
+    0%{scale: 1;}
+    25%{scale: 0.95;}
+    50%{scale: 0.99;}
+    100%{scale: 1;}
+}
 
+#logo{
+    width: 100px;
+    height: 50px;
+    translate: -440px;
+    display: flex;
+    align-items: end;
+    font-size: 5px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.607);
+}
+
+#imglogo{
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;}
 
